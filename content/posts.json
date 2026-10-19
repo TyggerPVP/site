@@ -3,25 +3,37 @@
     "title": "qweqwe",
     "date": "2026-10-19",
     "body": "qwewqe",
-    "published": true
+    "published": true,
+    "blog": "reflexoes"
   },
   {
     "title": "wrerwe",
     "date": "2026-10-19",
     "body": "werw",
-    "published": true
+    "published": true,
+    "blog": "diario"
   },
   {
     "title": "234234234",
     "date": "2026-10-19",
     "body": "234234",
-    "published": true
+    "published": true,
+    "blog": "reflexoes"
   },
   {
     "title": "werwer",
     "date": "2026-10-19",
     "summary": "wer",
     "body": "wer",
-    "published": true
+    "published": true,
+    "blog": "diario"
+  },
+  {
+    "title": "bruto",
+    "date": "2026-10-19",
+    "summary": "werwer",
+    "body": "aweraw",
+    "published": true,
+    "blog": "reflexoes"
   }
 ]
