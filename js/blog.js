@@ -1,6 +1,6 @@
 (function () {
   const feed = document.querySelector('[data-blog-feed]');
-  const videosOnly = document.body.dataset.blogMode === 'videos';
+const blogMode = document.body.dataset.blogMode;
   if (!feed) return;
 
   const escapeYouTubeId = (url) => {
@@ -64,7 +64,11 @@
     .then((response) => { if (!response.ok) throw new Error('Não foi possível carregar as publicações.'); return response.json(); })
     .then((items) => {
       if (!Array.isArray(items)) throw new Error('O arquivo de publicações precisa conter uma lista.');
-      const visible = items.filter(item => item && item.published === true && (!videosOnly || item.kind === 'video'));
+const visible = items.filter(item =>
+  item &&
+  item.published === true &&
+  item.blog === blogMode
+);
       visible.sort((a, b) => String(b.date || '').localeCompare(String(a.date || '')));
       feed.replaceChildren();
       if (!visible.length) {
