@@ -2,17 +2,26 @@
   {
     "title": "qweqwe",
     "date": "2026-10-19",
-    "body": "qwewqe"
+    "body": "qwewqe",
+    "published": true
   },
   {
     "title": "wrerwe",
     "date": "2026-10-19",
-    "body": "werw"
+    "body": "werw",
+    "published": true
   },
   {
     "title": "234234234",
     "date": "2026-10-19",
     "body": "234234",
-        "published": true
+    "published": true
+  },
+  {
+    "title": "werwer",
+    "date": "2026-10-19",
+    "summary": "wer",
+    "body": "wer",
+    "published": true
   }
 ]
