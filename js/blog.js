@@ -71,12 +71,18 @@ const visible = items.filter(item =>
 );
       visible.sort((a, b) => String(b.date || '').localeCompare(String(a.date || '')));
       feed.replaceChildren();
-      if (!visible.length) {
-        feed.append(make('div', 'blog-empty', videosOnly
-          ? 'Ainda não há vídeos publicados. Volte em breve para acompanhar as novidades.'
-          : 'Ainda não há publicações. Novos textos e vídeos aparecerão aqui em breve.'));
-        return;
-      }
+
+if (!visible.length) {
+  feed.append(make(
+    'div',
+    'blog-empty',
+    blogMode === 'diario'
+      ? 'Ainda não há publicações no Diário Audiovisual.'
+      : 'Ainda não há publicações em Textos e Reflexões.'
+  ));
+  return;
+}
+
       visible.forEach(item => feed.append(renderItem(item)));
     })
     .catch(() => feed.replaceChildren(make('div', 'blog-empty', 'Não foi possível carregar as publicações. Verifique se o arquivo content/posts.json existe e contém JSON válido.')));
