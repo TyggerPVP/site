@@ -1,6 +1,7 @@
 (function () {
   const feed = document.querySelector('[data-blog-feed]');
 const blogMode = document.body.dataset.blogMode;
+  console.log("Blog selecionado:", blogMode);
   if (!feed) return;
 
   const escapeYouTubeId = (url) => {
