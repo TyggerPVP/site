@@ -3,44 +3,25 @@ media:
   input: media
   output: /media
 
+
 content:
   - name: posts
     label: Publicações do blog
-    type: collection
-    path: content/posts
-    format: yaml-frontmatter
-    filename: "{primary}.md"
-    view:
-      primary: title
-      sort: date
-      order: desc
+    type: file
+    path: content/posts.json
+    format: json
+    list: true
     fields:
       - name: title
         label: Título
         type: string
         required: true
-
       - name: date
-        label: Data da publicação
+        label: Data
         type: date
-        required: true
-
-      - name: category
-        label: Categoria
-        type: string
-
-      - name: excerpt
-        label: Resumo
-        type: text
-
       - name: body
-        label: Texto da publicação
+        label: Texto
         type: rich-text
-
       - name: video
         label: Link do vídeo
         type: string
-
-      - name: published
-        label: Publicar no site
-        type: boolean
